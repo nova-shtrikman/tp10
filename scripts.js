@@ -14,16 +14,11 @@ document.addEventListener("DOMContentLoaded", function() {
     
     // get weather data for Pullman, WA
     fetch('https://weatherapi-com.p.rapidapi.com/current.json?q=Pullman%2C%20WA', options)
-        .then(function(response) {
-            return response.json(); // convert to JSON and return
-        })
-        .then(function(response) {
-            console.log(response); // output object
-           
-            // update page elements with object properties
-            document.querySelector("#temp").innerHTML = response.current.temp_f;
-            document.querySelector("#windDir").innerHTML = response.current.wind_dir;
-            document.querySelector("#windSpeed").innerHTML = response.current.wind_mph;
+        .then(response => response.json())
+        .then(function(response){
+            document.querySelector("#tempf span").innerHTML = response.current.temp_f;
+
+            return response;
         })
         .catch(err => console.error(err));
 

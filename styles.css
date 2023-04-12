@@ -1,2 +1,26 @@
-/*css for tp10
+/*css for tp10*/
+
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Raleway:ital,wght@1,200&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    
+}
+
+#temp {
+    background: rgb(0, 238, 255);
+    width: 100%;
+    height: 20vw;
+    position: relative;
+    font-family: 'Abril Fatface', cursive; 
+}
+
+#tempf {
+    font-size: 100px;
+    float: left;
+}
+
+
 
